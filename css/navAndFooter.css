@@ -82,6 +82,9 @@ nav ul li a:hover {
 .footer-section h4 {
   margin-bottom: 15px;
 }
+.footer-section .email{
+text-align: start;
+}
 
 .footer-logo {
   font-size: 28px;
