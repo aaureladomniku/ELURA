@@ -137,3 +137,66 @@ nav ul li a:hover {
   color: #423232ee;
   font-size: 14px;
 }
+
+
+
+#menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+#burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+.ic.hide{
+  display: none;
+}
+@media (max-width: 750px) {
+  #burger {
+    display: block;
+  }
+  .b{
+    color: black !important;
+  }
+  .ic{
+    display: none;
+  }
+  .ic.hide{
+    display: block;
+  }
+
+  #menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.922);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width:100%;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  
+}
+
+
+
+
+
+
+
+
