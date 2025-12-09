@@ -163,6 +163,14 @@ text-align: start;
 .ic.hide{
   display: none;
 }
+nav .ic img{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0px;
+  
+}
+
 @media (max-width: 750px) {
   #burger {
     display: block;
