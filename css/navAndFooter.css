@@ -82,8 +82,9 @@ nav ul li a:hover {
 .footer-section h4 {
   margin-bottom: 15px;
 }
-.footer-section .email{
-text-align: start;
+
+.footer-section .email {
+  text-align: start;
 }
 
 .footer-logo {
@@ -160,28 +161,33 @@ text-align: start;
   cursor: pointer;
   color: white;
 }
-.ic.hide{
+
+.ic.hide {
   display: none;
 }
-nav .ic img{
+
+nav .ic img {
   width: 20px;
   height: 20px;
   cursor: pointer;
   padding: 0px;
-  
+
 }
 
 @media (max-width: 750px) {
   #burger {
     display: block;
   }
-  .b{
+
+  .b {
     color: black !important;
   }
-  .ic{
+
+  .ic {
     display: none;
   }
-  .ic.hide{
+
+  .ic.hide {
     display: block;
   }
 
@@ -192,7 +198,7 @@ nav .ic img{
     position: absolute;
     top: 60px;
     right: 0;
-    width:100%;
+    width: 100%;
     padding: 15px;
     gap: 10px;
   }
@@ -201,13 +207,5 @@ nav .ic img{
     display: flex;
   }
 
-  
+
 }
-
-
-
-
-
-
-
-
