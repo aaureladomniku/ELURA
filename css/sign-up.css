@@ -52,12 +52,13 @@ input {
   height: 43px;
   margin: 0 auto 20px auto;
   border-radius: 10px;
-  border: 2px solid rgb(114, 82, 46);
+  border: 2px solid rgb(114, 82, 46) ;
   padding: 0 10px;
 }
 
 input::placeholder {
   color: rgb(114, 82, 46);
+
 }
 
 input[type="submit"] {
@@ -114,6 +115,14 @@ input.error:focus {
 
 }
 
+
+.SignupName.error::placeholder,
+.SignupEmail.error::placeholder,
+.SignupPassword.error::placeholder,
+.ConfirmedPassword.error::placeholder {
+  color: rgb(251, 9, 9);
+}
+
 .nameError.error,
 .emailError.error,
 .passwordError.error,
@@ -123,3 +132,4 @@ input.error:focus {
   font-size: 18px;
   margin-bottom: 5px;
 }
+
