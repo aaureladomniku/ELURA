@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elura LogIn</title>
   <link rel="stylesheet" href="../css/Log-in.css">
+  <script src="../js/loginValidation.js" defer></script>
  
 </head>
 <body>
@@ -16,12 +17,12 @@
       <div class="LoginLeft">
          <div class="LoginHolder">
           <h1 class="LoginTitle">LOG-IN</h1>
-             <form>
+             <form method="" novalidate>
              <input  class="userName" type="text" placeholder="username" required />
-             <span class="userError">Please fill in your Username</span>
+             <span class="userError"></span>
              <input  class ="userPassword" type="password" placeholder="password" required />
 
-             <span class="PasswordError">Please fill in your password correctly</span>
+             <span class="PasswordError"></span>
              <span class="forgot">Forgot ur password?</span>
 
              <input type="submit" value="LogIn" class="submit" />

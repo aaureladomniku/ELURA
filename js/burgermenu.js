@@ -10,6 +10,7 @@ burger.addEventListener("click", () => {
    })
 });
 
+
   let index = 0;
   const slider = document.querySelector(".slider");
   const posts = document.querySelectorAll(".slider .post");
