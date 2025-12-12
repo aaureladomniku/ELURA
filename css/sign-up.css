@@ -52,12 +52,12 @@ input {
   height: 43px;
   margin: 0 auto 20px auto;
   border-radius: 10px;
-  border: 2px solid rgb(114, 82, 46) !important;
+  border: 2px solid rgb(114, 82, 46) ;
   padding: 0 10px;
 }
 
 input::placeholder {
-  color: rgb(114, 82, 46) !important;
+  color: rgb(114, 82, 46) ;
 }
 
 input[type="submit"] {
