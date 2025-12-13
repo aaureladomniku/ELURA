@@ -123,6 +123,7 @@ input[type="submit"]:hover {
 }
 form span {
   display: none;
+  
 }
 form .Error {
   display: block;
