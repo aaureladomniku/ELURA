@@ -1,5 +1,3 @@
-
-
 .container {
   display: flex;
   width: 90%;
@@ -71,4 +69,28 @@ button {
   .right {
     width: 100%;
   }
+}
+
+form div {
+  display: none;
+}
+form .Error {
+  display: block;
+
+  color: rgb(189, 18, 18);
+}
+input.Error:focus,
+.textarea.Error:focus {
+  outline: 2px;
+  border-color: #da0000;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+input.Error,
+textarea.Error {
+  border: 2px solid red;
+}
+input.Error::placeholder,
+textarea.Error::placeholder {
+  color: red;
 }
