@@ -10,9 +10,9 @@ const emailError = document.querySelector(".emailError");
 const passError = document.querySelector(".passwordError");
 const confirmPassError = document.querySelector(".confirmedPasswordError");
 
-const nameRegex = /^[A-Za-z\s]{6,13}$/;
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const passRegex = /^[A-Za-z0-9!@#$%^&*]{8,20}$/;
+const nameRegex = /^[A-Za-z\s]{3,20}$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/;
+const passRegex =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
 
 function removeError(input, errorMessage) {
     input.addEventListener("input", () => {
@@ -46,7 +46,7 @@ form.addEventListener("submit", (e) => {
     if (!passRegex.test(passInput.value.trim())) {
         passInput.classList.add("error");
         passError.classList.add("error");
-        passError.innerHTML = "Password must be minimum 6 chars";
+        passError.innerHTML = "Password must have 8-20 characters";
         hasError = true;
     }
 

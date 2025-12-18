@@ -5,8 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const passwordError = document.querySelector(".PasswordError");
   const form = document.querySelector("form");
 
-  const passRegex = /^[A-Za-z0-9!@#$%^&*]{8,20}$/;
-  const usernameRegex = /^(?=.*[A-Za-z])[A-Za-z0-9!_.-]{6,13}$/;
+
+  const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
+  const usernameRegex =/^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/;
+  //username was turned into email(all emails are used as usernames)
+
+ 
+
 
   function removeError(input, errorMessage) {
     input.addEventListener("input", () => {
@@ -48,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       passwordError.innerHTML = "Password must be 8-20 characters";
       hasError = true;
     }
+   
 
     if (hasError) e.preventDefault();
   });
