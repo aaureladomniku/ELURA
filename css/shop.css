@@ -327,6 +327,13 @@
   padding: 10px 15px;
   border-radius: 8px;
 }
+#noMatchMsg{
+    color: red;
+    text-align: center;
+    font-weight: 800;
+   display: none;
+   padding: 0px 0px 50px 0px;
+}
 
 
 @media (max-width: 1380px) {

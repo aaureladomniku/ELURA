@@ -1,4 +1,3 @@
-
 const favIcon = document.querySelectorAll(".favIcon");
 favIcon.forEach(f => {
     f.addEventListener("click", () => {
@@ -6,53 +5,53 @@ favIcon.forEach(f => {
     });
 });
 
-
 const card = document.querySelectorAll(".Card");
 const inp = document.querySelector(".search-input");
 const button = document.querySelector(".search-btn");
+const noMatchMsg = document.getElementById("noMatchMsg");
+const resultCount = document.querySelector('.result-count');
 
-//if we click the button
 button.addEventListener("click", performSearch);
 
-//if we press enter
 inp.addEventListener("keypress", function(e) {
     if (e.key === "Enter") performSearch();
-    resultCount.style.display='none'
 });
 
-//the function the listeners call
 function performSearch() {
     let match = false;
     const val = inp.value.toLowerCase();
-   
+    let visibleCount = 0;
+    
     card.forEach(c => {
         const type = c.querySelector(".type").textContent.toLowerCase();
         if (type.includes(val)) {
             c.style.display = "block";
             match = true;
+            visibleCount++;
         } else {
             c.style.display = "none";
         }
     });
 
-    noMatchMsg.style.display = match ? "none" : "block";
+    if (noMatchMsg) {
+        noMatchMsg.style.display = match ? "none" : "block";
+    }
+    
+    if (resultCount) {
+        resultCount.style.display = "block";
+        resultCount.textContent = visibleCount + " products found";
+    }
 }
-
-
-
 
 const tags = document.querySelectorAll('.tag');
 tags.forEach(tag => {
     tag.addEventListener('click', function() {
-       
         tags.forEach(t => t.classList.remove('active'));
         this.classList.add('active');
         const category = this.textContent;
         filterProductsByCategory(category);
     });
 });
-
-
 
 function filterProductsByCategory(category) {
     const allCards = document.querySelectorAll('.Card');
@@ -61,16 +60,13 @@ function filterProductsByCategory(category) {
     allCards.forEach(card => {
         const type = card.querySelector('.type').textContent;
         
-      
         if (category === 'All Products') {
             card.style.display = 'block';
             visibleCount++;
             return;
         }
         
-       
         if (category === 'Living Room') {
-            
             if (type.includes('Couch') || type.includes('Table') || type.includes('Lamp')) {
                 card.style.display = 'block';
                 visibleCount++;
@@ -103,7 +99,7 @@ function filterProductsByCategory(category) {
             }
         }
         else if (category === 'Decor') {
-            if (type.includes('Decor') || type.includes('Art') || type.includes('Vase') || type.includes('Candels')) {
+            if (type.includes('Decor') || type.includes('Art') || type.includes('Vase') || type.includes('Candles')) {
                 card.style.display = 'block';
                 visibleCount++;
             } else {
@@ -119,7 +115,6 @@ function filterProductsByCategory(category) {
             }
         }
         else if (category === 'On Sale') {
-            
             const saleBadge = card.querySelector('.sale') || card.querySelector('.left');
             if (saleBadge) {
                 card.style.display = 'block';
@@ -128,7 +123,6 @@ function filterProductsByCategory(category) {
                 card.style.display = 'none';
             }
         }
-     
         else if (type === category) {
             card.style.display = 'block';
             visibleCount++;
@@ -137,18 +131,8 @@ function filterProductsByCategory(category) {
         }
     });
     
-   
-    const resultCount = document.querySelector('.result-count');
     if (resultCount) {
-        resultCount.textContent = visibleCount+'  products found'
-
-
-        button.addEventListener("click",()=>{
-            resultCount.style.display='none';
-        })
-
+        resultCount.style.display = 'block';
+        resultCount.textContent = visibleCount + ' products found';
     }
- 
-
 }
-
