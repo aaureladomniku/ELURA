@@ -54,21 +54,21 @@
 
 .welcomeleft h1 {
   transform: translateY(-100px);
-  color:#395739;
+  color:var(--title-color);
   font-size: 40px;
   letter-spacing: 3px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.633);
 }
 
 .welcomeleft h3 {
-  color: rgba(112, 96, 79, 0.9);
+  color: var(--sub-head);
   font-size: 22px;
   letter-spacing: 1.5px;
 }
 
 .welcomeleft p {
   margin-top: 7%;
-  color: #494238;
+   color: var(--sub-head);
   font-size: 1.1rem;
   line-height: 1.7;
   text-align: center;
@@ -89,7 +89,7 @@
   line-height: 2;
 }
 .CategoriesBanner h2 {
-  color: rgb(46, 65, 46);
+  color: var(--title-color);
   font-weight: 600;
   font-size: 30px;
 }
@@ -173,8 +173,9 @@
   height: 60vh;
 }
 .nccard {
-  background-color: rgba(234, 230, 226, 0.717);
+  background-color: var(--news-bg);
   width: 100%;
+
   height: 100%;
   display: flex;
   justify-content: center;

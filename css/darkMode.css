@@ -1,0 +1,124 @@
+/*adding the darkmode variables*/
+:root {
+  --bg-color: linear-gradient(to right, #efefef, #eeeded);
+  --text-color: rgba(15, 15, 68, 0.817);
+  --header-bg: rgba(112, 96, 79, 0.783);
+  --nav-link: rgba(255, 255, 255, 0.847);
+  --card-bg: #fff;
+  --card-shadow: grey;
+  --icon-bg: rgba(0, 0, 0, 0.639);
+  --icon-fav: rgb(255, 255, 255);
+  --icon-sale: rgba(199, 33, 33, 0.742);
+  --icon-best: rgba(57, 158, 27, 0.742);
+  --rating-color: rgba(4, 37, 73, 0.696);
+  --stock-color: rgb(19, 94, 19);
+  --search-bg: rgba(81, 104, 86, 0.779);
+  --no-match-color: #5b1b1b;
+  --explore-color:rgba(55, 71, 55, 0.616);
+  --lia-color:white;
+  --tag-color:black;
+   --title-color:#395739;
+   --sub-head: rgba(112, 96, 79, 0.9);
+   --news-bg:rgba(234, 230, 226, 0.717); 
+    --txt-col:black;
+ --beige-card:rgba(231, 228, 227, 0.097);
+ --contact-button-txt:white;
+--bg-menu:white;
+
+}
+
+body.dark-mode {
+  --bg-color: rgba(0, 0, 0, 0.894);
+  --text-color: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --nav-link: #000000;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.308);
+  --icon-bg: rgba(251, 251, 251, 0.793);
+  --icon-fav: #c81515;
+  --icon-sale: rgba(248, 242, 242, 0.721);
+  --icon-best: rgba(99, 199, 99, 0.906);
+  --rating-color: #5494d8;
+  --stock-color: #589458;
+  --search-bg: rgba(26, 129, 26, 0.7);
+  --no-match-color: #ff8888;
+  --explore-color:rgb(253, 253, 253);
+  --lia-color:rgb(0, 0, 0);
+  --tag-color:rgb(255, 255, 255);
+ --title-color:rgb(230, 227, 227);
+    --sub-head:rgb(231, 229, 226);
+    --news-bg:  rgba(20, 20, 20, 0.06);
+   --beige-card: rgba(20, 20, 20, 0.06);
+     --txt-col:white;
+      --contact-button-txt:rgb(0, 0, 0);
+      --bg-menu:black;
+ 
+}
+
+/*global css with darkmode*/
+nav ul li a {
+  color: var(--lia-color) !important ;
+}
+
+body, html {
+  overflow-x: hidden;
+  font-family: "Bebas Neue", sans-serif;
+  background: var(--bg-color);
+ color:var(--txt-col);
+  transition: all 0.3s ease;
+}
+#burger{
+    color:var(--bg-menu);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 12px rgb(33, 30, 14);
+}
+
+nav h3 {
+  cursor: pointer;
+  letter-spacing: 2px;
+  color: var(--nav-link);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--nav-link);
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  transform: translateY(-4px);
+}
+
+
+
+
+
+
+

@@ -51,7 +51,7 @@ button {
   width: 150px;
   padding: 12px;
   background: #b3a492;
-  color: white;
+  color:var(--contact-button-txt);
   border: none;
   cursor: pointer;
   font-size: 14px;

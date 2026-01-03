@@ -32,7 +32,13 @@
   box-shadow: 0px 5px 10px rgba(160, 154, 154, 0.466);
 }
 
-
+.hero h3{
+    transform: translateY(-100px);
+    color: aliceblue;
+    background-color: rgba(98, 80, 58, 0.459);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
 .collections {
     height: auto;
     margin:50px auto;
@@ -64,13 +70,21 @@
 }
 
 .tag {
-    padding: 0.6rem 1.5rem;
-    
-    border: 2px solid grey;
-    border-radius: 25px;
-    cursor: pointer;
-    
-    font-weight: 500;
+   display: inline-flex;          /* allows centering */
+  align-items: center;
+  justify-content: center;
+ border: 2px solid rgba(149, 149, 149, 0.352);
+  width: 140px;
+  height: 44px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 500;
+
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .tag:hover, .tag.active {
@@ -180,6 +194,10 @@
   margin: 15px;
   border-radius: 10px;
   box-shadow: 0px 0.4px 7px grey;
+    background-color: var(--card-bg);
+  box-shadow: 0px 0.4px 7px var(--card-shadow);
+  transition: all 0.3s ease;
+
 }
 .CardImg {
   position: relative;
@@ -192,7 +210,7 @@
 }
 .CardImg:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 3px 8px grey;
+   box-shadow: 0px 3px 8px var(--card-shadow);
 }
 .CardImg img {
   pointer-events: none;
@@ -208,27 +226,27 @@
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-  color: rgba(15, 15, 68, 0.817);
+  color: var(--text-color);
 }
 .favIcon {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 5px 11px;
-  color: rgb(255, 255, 255);
+ color: var(--icon-fav);
   cursor: pointer;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.639);
+  background-color: var(--icon-bg);
 }
 .icon {
   position: absolute;
   top: 10px;
   left: 10px;
   padding: 6px 8px;
-  color: rgb(255, 255, 255);
+   color: var(--icon-fav);
   cursor: pointer;
   border-radius: 6px;
-  background-color: rgba(57, 158, 27, 0.742);
+ background-color: var(--icon-best);
 }
 .sale,
 .left {
@@ -236,10 +254,10 @@
   top: 10px;
   left: 10px;
   padding: 6px 8px;
-  color: rgb(255, 255, 255);
+ color: var(--icon-fav);
   cursor: pointer;
   border-radius: 6px;
-  background-color: rgba(199, 33, 33, 0.742);
+  background-color: var(--icon-sale);
 }
 .favIcon:hover {
   background-color: red;
@@ -252,7 +270,7 @@
 .PostsText {
   font-size: 40px;
   text-align: center;
-  color: rgba(36, 69, 36, 0.616);
+  color: var(--explore-color);
   padding: 5px;
   margin-bottom: 10px;
 }
@@ -266,11 +284,11 @@
   font-size: 15px;
 }
 .rating {
-  color: rgba(4, 37, 73, 0.696);
+ color: var(--rating-color);
 }
 .stock {
   border-radius: 3px;
-  color: rgb(19, 94, 19);
+  color: var(--stock-color);
   font-weight: 700;
 }
 .searchHolder {
@@ -291,7 +309,7 @@
 .c {
   width: 70px;
   height: 30px;
-  background-color: rgba(81, 104, 86, 0.779);
+   background-color: var(--search-bg);
   border: none;
   box-shadow: 0px 0px 5px grey;
   border-radius: 20px;
@@ -321,7 +339,7 @@
   display: none;
   text-align: center;
   font-size: 1.2rem;
-  color: #5b1b1b;
+ color: var(--no-match-color);
   margin: 20px 0;
   font-weight: bold;
   padding: 10px 15px;
@@ -330,12 +348,14 @@
 #noMatchMsg{
     color: red;
     text-align: center;
-    font-weight: 800;
+    font-weight: 300;
    display: none;
    padding: 0px 0px 50px 0px;
 }
 
-
+.tag{
+    color:var(--tag-color);
+}
 @media (max-width: 1380px) {
   #first {
     width: 100%;
@@ -344,6 +364,7 @@
   #third {
     display: none !important;
   }
+  
 }
 @media (max-width: 1024px) {
     .section-title {

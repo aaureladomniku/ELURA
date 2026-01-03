@@ -56,17 +56,19 @@ tags.forEach(tag => {
 function filterProductsByCategory(category) {
     const allCards = document.querySelectorAll('.Card');
     let visibleCount = 0;
-    
+    noMatchMsg.style.display='none';
+   
     allCards.forEach(card => {
         const type = card.querySelector('.type').textContent;
         
         if (category === 'All Products') {
             card.style.display = 'block';
             visibleCount++;
-            return;
+            
+           
         }
         
-        if (category === 'Living Room') {
+      else  if (category === 'Living Room') {
             if (type.includes('Couch') || type.includes('Table') || type.includes('Lamp')) {
                 card.style.display = 'block';
                 visibleCount++;
@@ -130,9 +132,18 @@ function filterProductsByCategory(category) {
             card.style.display = 'none';
         }
     });
+
+     if(visibleCount==0){
+        
+    noMatchMsg.style.display='block'
+    }
+    
     
     if (resultCount) {
         resultCount.style.display = 'block';
         resultCount.textContent = visibleCount + ' products found';
     }
 }
+
+
+
