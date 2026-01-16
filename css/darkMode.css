@@ -24,6 +24,9 @@
  --beige-card:rgba(231, 228, 227, 0.097);
  --contact-button-txt:white;
 --bg-menu:white;
+--th-col: #f5f1eb;
+--btn-bg:black;
+--btn-txt:white;
 
 }
 
@@ -52,6 +55,10 @@ body.dark-mode {
      --txt-col:white;
       --contact-button-txt:rgb(0, 0, 0);
       --bg-menu:black;
+      --th-col:rgba(52, 51, 51, 0.248);
+      --btn-bg:rgb(255, 255, 255);
+--btn-txt:rgb(0, 0, 0);
+      
  
 }
 
