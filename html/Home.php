@@ -1,55 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include_once '../includes/header.php'
+?>
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
    <link rel="stylesheet" href="../css/Home.css">
-   <link rel="stylesheet" href="../css/navAndFooter.css">
-   <link rel="stylesheet" href="../css/darkMode.css">
-   <script src="../js/burgermenu.js" defer></script>
-   
-  
 </head>
-
-<body>
-   <header>
-      <nav>
-        <h3>eluraDecor</h3>
-
-        <ul  id="menu">
-          <li class="l"><a  href="../html/Home.html">HOME</a></li>
-          <li class="l"><a href="../html/About-us.html">ABOUT </a></li>
-          <li class="l"><a href="../html/Shop.html">SHOP</a></li>
-          <li class="l"><a href="../html/Blog.html">BLOG</a></li>
-          <li class="l"><a href="../html/Contact.html">CONTACT </a></li>
-           
-          <div class="ic hide">
-          <img class="darkModeToggle" src="../images/moonBlack.png" alt="">
-          <img src="../images/heartBlack.png" alt="">
-         <img src="../images/cartBlack.png" alt=""> 
-          </div>
-         
-         
-        </ul>
-
-           <div class="ic">
-          <img class="darkModeToggle" src="../images/moonWhite.png">
-                <img src="../images/heartWhite.png" alt="">
-                <img src="../images/cartWhite.png" alt=""> 
-        </div>
-
-      
-
-       
-
-
-           <div id="burger">☰</div>
-          
-     
-      </nav>
-    </header>
-
     <main>
       
       <section class="HomeWelcomeContainer">
@@ -291,55 +245,8 @@
 
 
     </main>
+<?php
 
-<footer class="footer">
-  <div class="footer-container">
+include_once '../includes/footer.php'
 
-    <div class="footer-section">
-      <h3 class="footer-logo">eluraDecor</h3>
-      <p class="footer-desc">Where modern design meets timeless comfort.</p>
-
-      <div class="footer-socials">
-        <a href="#"><img  src="../images/icons8-twitter-bird-100.png" ></a>
-        <a href="#"><img src="../images/linkedin.png" ></a>
-        <a href="#"><img src="../images/instagram.png" ></a>
-        <a href="#"><img src="../images/email.png" ></a>
-      </div>
-    </div>
-
-  
-  
-    <div class="footer-section">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Shipping & Returns</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-      </ul>
-    </div>
-
-
-    <div class="footer-section">
-      <h4>Stay Updated</h4>
-      <p>Join our mailing list for décor tips & offers.</p>
-
-        <p class="email">eluraDecor@support.com</p>
-        <p class="email">eluraDecor@return.com</p>
-
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Elura Decor — All Rights Reserved.</p>
-  </div>
-</footer>
-
-
-
-    
-
-
-</body>
-</html>
+?>

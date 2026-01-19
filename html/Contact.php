@@ -1,55 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+
+include_once '../includes/header.php';
+?>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/contact.css" />
-  <link rel="stylesheet" href="../css/navAndFooter.css" />
-  <script src="../js/burgermenu.js" defer></script>
-  <script src="../js/contactValidation.js" defer></script>
-  <title>Contact Form</title>
+  <link rel="stylesheet" href="../css/contact.css">
 </head>
-
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/contact.css" />
-  <link rel="stylesheet" href="../css/navAndFooter.css" />
-  <link rel="stylesheet" href="../css/darkMode.css">
-  <script src="../js/burgermenu.js" defer></script>
-  <title>Contact Form</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <h3>eluraDecor</h3>
-
-      <ul id="menu">
-        <li class="l"><a href="Home.html">HOME</a></li>
-        <li class="l"><a href="About-us.html">ABOUT </a></li>
-        <li class="l"><a href="Shop.html">SHOP</a></li>
-        <li class="l"><a href="Blog.html">BLOG</a></li>
-        <li class="l"><a href="Contact.html">CONTACT </a></li>
-
-        <div class="ic hide">
-          <img class="darkModeToggle" src="../images/moonBlack.png" alt="" />
-          <img src="../images/heartBlack.png" alt="" />
-          <img src="../images/cartBlack.png" alt="" />
-        </div>
-      </ul>
-
-      <div class="ic">
-        <img class="darkModeToggle" src="../images/moonWhite.png" />
-        <img src="../images/heartWhite.png" alt="" />
-        <img src="../images/cartWhite.png" alt="" />
-      </div>
-
-      <div id="burger">☰</div>
-    </nav>
-  </header>
   <main>
     <div class="container">
       <div class="left">
