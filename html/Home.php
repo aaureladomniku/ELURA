@@ -1,5 +1,5 @@
 <?php
-include_once '../includes/header.php'
+include_once '../includes/header.php';
 ?>
 <head>
    <link rel="stylesheet" href="../css/Home.css">

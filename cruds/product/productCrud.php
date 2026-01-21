@@ -1,8 +1,9 @@
 <?php
 
+
  include_once '../SQL/DbConnection.php';
 
-class productCrud extends dbconnection{
+class productCrud extends DbConnection{
 
 
 
