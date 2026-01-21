@@ -21,21 +21,28 @@
 
         </div>
         <div class="SignLeft">
+            
             <div class="cl">
 
 
-                <form action="" method="" novalidate>
+                <form action="../cruds/user/signup.inc.php" method="post" novalidate>
 
                     <h1 class="SignUpTitle">SIGN-UP</h1>
+
                     <input type="text" class="SignupName" placeholder="Full name" required />
                     <span class="nameError" aria-live="polite"></span>
+
                     <input type="email" class="SignupEmail" placeholder="email@example.com" required />
                     <span class="emailError" aria-live="polite"></span>
+
                     <input type="password" class="SignupPassword" placeholder="password" required />
                     <span class="passwordError" aria-live="polite"></span>
+
                     <input type="password" class="ConfirmedPassword" placeholder="Confirme Password" required />
                     <span class="confirmedPasswordError" aria-live="polite"></span>
+
                     <input type="submit" value="SignUp" class="submit" />
+
                 </form>
 
             </div>
