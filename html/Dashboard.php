@@ -119,7 +119,7 @@ include_once '../includes/header.php'
 
 <div class="CreateForm">
 
-<form action="createForm.inc.php" method="POST" enctype="multipart/form-data">
+<form action="../cruds/product/createForm.inc.php" method="POST" enctype="multipart/form-data">
      <div class="title">
         <h3>CREATE/ADD A PRODUCT</h3>
      </div>
