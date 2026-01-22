@@ -1,9 +1,8 @@
 <?php
 
 require_once 'fileController.php';
-require_once 'DbConnection.php';
-require_once 'productCrud.php';    // only if inserting
-
+include_once __DIR__ . '/../../SQL/DbConnection.php';
+include_once 'productCrud.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
@@ -36,7 +35,7 @@ $errors = array_merge($errors, $imageErrors);
         move_uploaded_file($file['tmp_name'], $uploadPath);
 
       
-         $productCrud = new ProductCrud();
+         $productCrud = new productCrud();
      $productCrud->createProduct(
         $title,
         $description,
@@ -46,7 +45,7 @@ $errors = array_merge($errors, $imageErrors);
           $reviews
     );
 
-    header("Location: dashboard.php?created=1");
+    header("Location: ../../html/Dashboard.php");
     exit;
     }
 

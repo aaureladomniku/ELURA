@@ -2,6 +2,9 @@
       
 <?php
 include_once '../includes/header.php';
+include_once '../cruds/product/productCrud.php';
+$productCrud=new productCrud();
+$posts=$productCrud->readAllProducts();
 ?>
 <head>
   <link rel="stylesheet" href="../css/shop.css">
@@ -100,12 +103,31 @@ include_once '../includes/header.php';
           </div>
         <section class="Posts">
          
+<?php foreach($posts as $p): ?>
 
+              <div class="Card">
+                <div class="CardImg">
+                <img src="../cruds/product/uploads/<?= $p['image_url'] ?>" alt="Kitchen">
+                 <p class="favIcon">♡</p>
+               
+                 </div>
+                <div class="text">
+                <p class="type"><?= $p['title'] ?></p>
+                <p><?= $p['price'] ?></p>
+                 
+                </div>
+                 <div class="txt2">
+                 <p class="stock">◯ In Stock </p>
+                 <p class="rating">⭐⭐⭐⭐ (57 reviews)</p>
+                  </div>
+              
+            </div>
+<?php endforeach;?>
           
 
                <div class="Card">
                 <div class="CardImg">
-                <img src="/images/K1.jpg" alt="Kitchen">
+                <img src="../images/K1.jpg" alt="Kitchen">
                  <p class="favIcon">♡</p>
                  <p class="icon">Client Favourite</p>
                  </div>
@@ -125,7 +147,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/B1.jpg" alt="Bathroom">
+                <img src="../images/B1.jpg" alt="Bathroom">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -158,7 +180,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/BR1.jpg" alt="Bedroom">
+                <img src="../images/BR1.jpg" alt="Bedroom">
                  <p class="favIcon">♡</p>
                   
                 </div>
@@ -179,7 +201,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/D.jpg" alt="ChristmasDecoration">
+                <img src="../images/D.jpg" alt="ChristmasDecoration">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -213,7 +235,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/BR2.jpg" alt="Bedroom">
+                <img src="../images/BR2.jpg" alt="Bedroom">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -270,7 +292,7 @@ include_once '../includes/header.php';
   
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/D2.jpg" alt="Door decoration">
+                <img src="../images/D2.jpg" alt="Door decoration">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -287,7 +309,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/il_1588xN.4920525378_gozw.webp" alt="Wall Art">
+                <img src="../images/il_1588xN.4920525378_gozw.webp" alt="Wall Art">
                  <p class="favIcon">♡</p>
                  <p class="left">only 3 left</p>
                 </div>
@@ -303,7 +325,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/il_1588xN.7434265437_g88w.avif" alt="Wall Art">
+                <img src="../images/il_1588xN.7434265437_g88w.avif" alt="Wall Art">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -316,23 +338,8 @@ include_once '../includes/header.php';
                  </div>
             </div>
 
-                 <div class="Card">
-                <div class="CardImg">
-                <img src="https://i.pinimg.com/1200x/4f/99/61/4f9961374f9ae5024a679302d79d7ecc.jpg" alt="Kitchen">
-                 <p class="favIcon">♡</p>
-                 <p class="icon">Client Favourite</p>
-                 </div>
-                <div class="text">
-                <p class="type">Wall Art</p>
-                <p>10$</p>
                  
-                </div>
-                 <div class="txt2">
-                 <p class="stock">◯ In Stock </p>
-                 <p class="rating">⭐⭐⭐⭐ (57 reviews)</p>
-                  </div>
-              
-            </div>
+            
              
                <div class="Card">
                 <div class="CardImg">
@@ -367,7 +374,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/V1.jpg" alt="VaseSet">
+                <img src="../images/V1.jpg" alt="VaseSet">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -418,7 +425,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/office.jpg" alt="Office desk">
+                <img src="../images/office.jpg" alt="Office desk">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -433,7 +440,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/P2.avif" alt="Wall Art">
+                <img src="../images/P2.avif" alt="Wall Art">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -449,7 +456,7 @@ include_once '../includes/header.php';
 
               <div class="Card">
                 <div class="CardImg">
-                <img src="/images/plates1.jpg" alt="Table Decor">
+                <img src="../images/plates1.jpg" alt="Table Decor">
                  <p class="favIcon">♡</p>
                  <p class="left">only 6 left</p>
                 </div>
@@ -465,7 +472,7 @@ include_once '../includes/header.php';
 
              <div class="Card">
                 <div class="CardImg">
-                <img src="/images/d39fb719d66d9764358da7e423147197.jpg" alt="Vase">
+                <img src="../images/d39fb719d66d9764358da7e423147197.jpg" alt="Vase">
                  <p class="favIcon">♡</p>
                 </div>
                <div class="text">
@@ -478,21 +485,6 @@ include_once '../includes/header.php';
                  </div>
             </div>
 
-
-              <div class="Card">
-                <div class="CardImg">
-                <img src="/images/e385c846630db07e800673cf55f7cd7e.jpg" alt="Table decor">
-                 <p class="favIcon">♡</p>
-                </div>
-               <div class="text">
-                 <p class="type">Table Decor</p>
-                <p>25$</p>
-               </div>
-                 <div class="txt2">
-                 <p class="stock">◯ In Stock </p>
-                 <p class="rating">⭐⭐⭐⭐ (57 reviews)</p>
-                 </div>
-            </div>
 
                 
 
@@ -542,36 +534,8 @@ include_once '../includes/header.php';
                  </div>
             </div>
 
-             <div class="Card">
-                <div class="CardImg">
-                <img src="/images/Couch.avif" alt="couch">
-                 <p class="favIcon">♡</p>
-                </div>
-               <div class="text">
-                 <p class="type">Side Couch </p>
-                <p>187$</p>
-               </div>
-                 <div class="txt2">
-                 <p class="stock">◯ In Stock </p>
-                 <p class="rating">⭐⭐⭐⭐ (57 reviews)</p>
-                 </div>
-            </div>
 
 
-              <div class="Card">
-                <div class="CardImg">
-                <img src="/images/table1.jpg" alt="Table">
-                 <p class="favIcon">♡</p>
-                </div>
-               <div class="text">
-                <p class="type">Table </p>
-                <p>137$</p>
-               </div>
-                 <div class="txt2">
-                 <p class="stock">◯ In Stock </p>
-                 <p class="rating">⭐⭐⭐⭐ (57 reviews)</p>
-                 </div>
-            </div>
 
 
              <div class="Card">

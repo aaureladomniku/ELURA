@@ -80,8 +80,8 @@ include_once '../includes/header.php'
         <tr>
             <th>ID</th>
             <th>Title</th>
-            <th>Rating</th>
-            <th>Date</th>
+            <th>Description</th>
+            <th>price</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -93,15 +93,17 @@ include_once '../includes/header.php'
            <tr>
             <td><?= $p['id'] ?></td>
             <td><?= $p['title'] ?></td>
-            <td><?= $p['rating'] ?></td>
-            <td><?= $p['created_at'] ?></td>
+            <td><?= $p['description'] ?></td>
+            <td><?= $p['price'] ?></td>
+          
            
                     <td class="actions">
-            <a href="updatePosts.php?id=<?= $p['id'] ?>" class="btn update">
-                Update
-            </a>
+           <a href="../cruds/product/updateProductForm.php?id=<?= $p['id'] ?>" class="btn update">
+    Update
+</a>
 
-            <form action="deletePost.inc.php" method="POST">
+
+            <form action="../cruds/product/deletePost.inc.php" method="POST">
                 <input type="hidden" name="id" value="<?= $p['id'] ?>">
                 <button type="submit" name="delete" class="btn delete"
                     onclick="return confirm('Delete this user?')">

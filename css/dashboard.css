@@ -3,7 +3,7 @@
 .dashboard-title {
     margin-top: 120px;
   margin-bottom: 20px;
-  color: #111;
+  color:var(--txt-col);
   text-align: center;
 }
 
