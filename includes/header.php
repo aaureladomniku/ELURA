@@ -26,7 +26,7 @@
           <li class="l"><a href="../html/Shop.php">SHOP</a></li>
           <li class="l"><a href="../html/Blog.php">BLOG</a></li>
           <li class="l"><a href="../html/Contact.php">CONTACT </a></li>
-            <li class="l"><a href="../html/Dashboard.php">DASHBOARD </a></li>
+          <li class="l"><a href="../html/Dashboard.php">DASHBOARD </a></li>
          
            
           <div class="ic hide">

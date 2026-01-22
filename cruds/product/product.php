@@ -1,49 +1,77 @@
 <?php
+class products{
 
- include_once '../SQL/DbConnection.php';
+    private $title;
+    private $description;
+     private $price;
+    private $image_url;
+    private $rating;
+    private $reviews_count;
 
-class productCrud extends dbconnection{
-
-
-
-    public function createProduct($title,$description,$price,$image_url,$rating,$reviews_count){
-        $sql='INSERT INTO products (title,description,price,image_url,rating,reviews_count)VALUES (?,?,?,?,?,?);';
-        $stmt=$this->getConn()->prepare($sql);
-       return $stmt->execute([$title,$description,$price,$image_url,$rating,$reviews_count]);
+    public function __construct($title,$description,$price,$image_url,$rating,$reviews_count){
+   $this->title=$title;
+   $this->description=$description;
+   $this->price=$price;
+   $this->image_url=$image_url;
+   $this->rating=$rating;
+   $this->reviews_count=$reviews_count;
     }
 
-    public function readAllProducts(){
-         $sql='SELECT * FROM products';
-         $stmt=$this->getConn()->prepare($sql);
-          $stmt->execute();
-          return $stmt->fetchAll();
+
+   
+    public function getTitle() {
+        return $this->title;
     }
 
-    public function deleteProduct($id){
-        $sql='DELETE FROM  products WHERE id=?';
-        $stmt=$this->getConn()->prepare($sql);
-        return $stmt->execute([$id]);
+    public function setTitle($title) {
+        $this->title = $title;
     }
 
-  public function updateProduct($id, $title, $description, $price, $rating, $reviews_count) {
-    $sql = 'UPDATE products
-            SET title = ?, 
-                description = ?, 
-                price = ?,
-                rating = ?, 
-                reviews_count = ?
-            WHERE id = ?';
-    $stmt = $this->getConn()->prepare($sql);
-    return $stmt->execute([
-        $title,
-        $description,
-        $price,
-        $rating,
-        $reviews_count,
-        $id
-    ]);
+ 
+    public function getDescription() {
+        return $this->description;
+    }
+
+    public function setDescription($description) {
+        $this->description = $description;
+    }
+
+  
+    public function getPrice() {
+        return $this->price;
+    }
+
+    public function setPrice($price) {
+        $this->price = $price;
+    }
 
     
+    public function getImageUrl() {
+        return $this->image_url;
+    }
+
+    public function setImageUrl($image_url) {
+        $this->image_url = $image_url;
+    }
+
+    
+    public function getRating() {
+        return $this->rating;
+    }
+
+    public function setRating($rating) {
+        $this->rating = $rating;
+    }
+
+  
+    public function getReviewsCount() {
+        return $this->reviews_count;
+    }
+
+    public function setReviewsCount($reviews_count) {
+        $this->reviews_count = $reviews_count;
+    }
+
 }
-}
+
 
