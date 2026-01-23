@@ -1,5 +1,17 @@
 
 <?php
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+if (isset($_SESSION['user_id'])) {
+    if ($_SESSION['user_role'] === 'admin') {
+        header("Location: Dashboard.php");
+    } else {
+        header("Location: Home.php");
+    }
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,15 +39,15 @@
 
              <form method="post" action="../cruds/user/login.inc.php" novalidate>
 
-             <input  class="userName" type="text" placeholder="username" required />
+             <input  class="userName" type="text" placeholder="username" name='email' required />
              <span class="userError" aria-live="polite"></span>
 
-             <input  class ="userPassword" type="password" placeholder="password" required />
+             <input  class ="userPassword" name='password'  type="password" placeholder="password" required />
              <span class="PasswordError" aria-live="polite"></span>
 
              <span class="forgot">Forgot ur password?</span>
 
-             <input type="submit" value="LogIn" class="submit" />
+             <input type="submit" value="LogIn" name="submit" class="submit" />
             
               <span class="signUp">Don't have an account?
               <a href="sign-up.html">Sign-Up</a></span>

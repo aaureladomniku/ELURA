@@ -1,8 +1,25 @@
 <?php
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: log-in.php");
+    exit();
+}
+
+
+if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
+    header("Location: Home.php");
+    exit();
+}
+
+
 include_once '../cruds/product/productCrud.php';
 include_once '../cruds/user/UserCrud.php';
 require_once '../cruds/product/product.php';
+
 
 $userCrud = new UserCrud();
 $users = $userCrud->readUsers();
@@ -11,7 +28,9 @@ $productCrud=new productCrud();
 $posts=$productCrud->readAllProducts();
 
 
-include_once '../includes/header.php'
+include_once '../includes/header.php';
+
+
 
 ?>
 

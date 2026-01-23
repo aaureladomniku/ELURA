@@ -1,6 +1,6 @@
 <?php
 
-include_once '../includes/header.php'
+include_once '../includes/header.php';
 ?>
 
 <head>
@@ -14,7 +14,7 @@ include_once '../includes/header.php'
 
             <div class="paragraph">
                 <div class="holder">
-                    <h2>About EluraDecor</h2>
+                    <h2 class='title'>About EluraDecor</h2>
                     <p>EluraDecor is a premier destination for exquisite home decor and furnishings. Our mission is
                         to
                         transform

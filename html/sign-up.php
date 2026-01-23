@@ -29,19 +29,19 @@
 
                     <h1 class="SignUpTitle">SIGN-UP</h1>
 
-                    <input type="text" class="SignupName" placeholder="Full name" required />
+                    <input type="text" class="SignupName" placeholder="Full name" name="name" required />
                     <span class="nameError" aria-live="polite"></span>
 
-                    <input type="email" class="SignupEmail" placeholder="email@example.com" required />
+                    <input type="email" class="SignupEmail" placeholder="email@example.com" name="email"  required />
                     <span class="emailError" aria-live="polite"></span>
 
-                    <input type="password" class="SignupPassword" placeholder="password" required />
+                    <input type="password" class="SignupPassword" placeholder="password"  name="password" required />
                     <span class="passwordError" aria-live="polite"></span>
 
-                    <input type="password" class="ConfirmedPassword" placeholder="Confirme Password" required />
+                    <input type="password" class="ConfirmedPassword" placeholder="Confirme Password" name="confirmPassword"  required />
                     <span class="confirmedPasswordError" aria-live="polite"></span>
 
-                    <input type="submit" value="SignUp" class="submit" />
+                    <input type="submit" value="SignUp" class="submit" name="submit" />
 
                 </form>
 

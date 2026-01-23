@@ -21,12 +21,12 @@ class LoginController
         $user = $this->userCrud->getUserByEmail($this->email);
 
         if (!$user) {
-            header("Location: login.php?error=user_not_found");
+          header("Location: ../../html/log-in.php");
             exit();
         }
 
         if (!password_verify($this->password, $user['password'])){
-            header("Location: login.php?error=wrong_password");
+         header("Location: ../../html/log-in.php");
             exit();
         }
 
@@ -37,7 +37,15 @@ class LoginController
         $_SESSION['user_role'] = $user['role'];
 
 
-        header("Location: dashboard.php");
-        exit();
+        
+if ($user['role'] === 'admin') {
+    header("Location: ../../html/Dashboard.php");
+    exit();
+} else {
+    header("Location: ../../html/Home.php");
+    exit();
+}
+
+
     }
 }

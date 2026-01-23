@@ -1,4 +1,9 @@
-<?php
+<?php 
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 ?>
 
 
@@ -26,13 +31,20 @@
           <li class="l"><a href="../html/Shop.php">SHOP</a></li>
           <li class="l"><a href="../html/Blog.php">BLOG</a></li>
           <li class="l"><a href="../html/Contact.php">CONTACT </a></li>
-          <li class="l"><a href="../html/Dashboard.php">DASHBOARD </a></li>
-         
+          <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+    <li class="l"><a href="../html/Dashboard.php">DASHBOARD</a></li>
+<?php endif; ?>
+
            
           <div class="ic hide">
           <img class="darkModeToggle" src="../images/moonBlack.png" alt="">
           <img src="../images/heartBlack.png" alt="">
          <img src="../images/cartBlack.png" alt=""> 
+
+         <?php if (isset($_SESSION['user_id'])): ?>
+           <a href="../cruds/user/logout.php">LOGOUT</a> 
+            <?php endif;?>
+
           </div>
          
          
@@ -42,6 +54,13 @@
           <img class="darkModeToggle" src="../images/moonWhite.png">
                 <img src="../images/heartWhite.png" alt="">
                 <img src="../images/cartWhite.png" alt=""> 
+                
+         <?php if (isset($_SESSION['user_id'])): ?>
+           <a href="../cruds/user/logout.php">LOGOUT</a> 
+            <?php endif;?>
+            
+
+               
         </div>
 
       

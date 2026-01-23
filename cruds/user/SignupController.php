@@ -1,8 +1,7 @@
 <?php
-
-include_once '../SQL/DbConnection.php';
+include_once __DIR__ . '/../../SQL/DbConnection.php';
 include_once 'user.php';
-include_once 'UsersClass.php';
+include_once 'UserCrud.php';
 
 
 class SignupController
@@ -26,12 +25,12 @@ class SignupController
     public function processSignup()
     {
         if ($this->userCrud->getUserByEmail($this->email)) {
-            header("Location: signup.php?error=email_exists");
+            header("Location: ../../html/login.php");
             exit();
         }
 
         $this->userCrud->createUser($this->name, $this->email, $this->password);
-        header("Location: signup.php?success=1");
+        header("Location: ../../html/login.php");
         exit();
     }
 }

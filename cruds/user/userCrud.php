@@ -1,5 +1,6 @@
 <?php
- include_once '../SQL/DbConnection.php';
+
+include_once __DIR__ . '/../../SQL/DbConnection.php';
 
 class UserCrud extends DbConnection{
 
