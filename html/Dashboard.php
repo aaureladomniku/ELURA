@@ -51,7 +51,6 @@ include_once '../includes/header.php';
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Role</th>
             <th>Date</th>
             <th>Actions</th>
         </tr>
@@ -65,10 +64,9 @@ include_once '../includes/header.php';
         <td><?= $user['id'] ?></td>
         <td><?= htmlspecialchars($user['name']) ?></td>
         <td><?= htmlspecialchars($user['email']) ?></td>
-        <td><?= htmlspecialchars($user['role']) ?></td>
         <td><?= htmlspecialchars($user['created_at']) ?></td>
         <td class="actions">
-            <a href="updateUser.php?id=<?= $user['id'] ?>" class="btn update">
+            <a href="../cruds/user/updateUser.php?id=<?= $user['id'] ?>" class="btn update">
                 Update
             </a>
 
