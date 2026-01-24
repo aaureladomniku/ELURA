@@ -45,7 +45,7 @@ if (session_status() == PHP_SESSION_NONE) {
              
           </div>
             <?php if (isset($_SESSION['user_id'])): ?>
-  <li class="l ic hide"><a class="logout" style="text-decoration:none;font-weight:bold;font-size:20px;color:black;" href="../cruds/user/logout.php">LOGOUT</a><li>
+  <li class="l ic hide"><a class="logout" style="text-decoration:none;font-weight:bold;font-size:17px;color:black;" href="../cruds/user/logout.php">LOGOUT</a><li>
 <?php endif;?>
   </ul>
            
@@ -53,7 +53,7 @@ if (session_status() == PHP_SESSION_NONE) {
          
       
 
-           <div class="ic">
+           <div class="ic ic-row" >
           <img class="darkModeToggle" src="../images/moonWhite.png">
                 <img src="../images/heartWhite.png" alt="">
                 <img src="../images/cartWhite.png" alt=""> 
