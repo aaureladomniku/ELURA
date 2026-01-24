@@ -1,97 +1,98 @@
 <?php
 include_once '../includes/header.php';
 ?>
+
 <head>
    <link rel="stylesheet" href="../css/Home.css">
 </head>
-    <main>
-      
-      <section class="HomeWelcomeContainer">
-         <div class="welcomeright">
+<main>
+
+   <section class="HomeWelcomeContainer">
+      <div class="welcomeright">
          <img src="https://i.pinimg.com/1200x/f2/bb/76/f2bb76040cc1e2b92fbf57b7d5a9c85b.jpg" alt="">
-         </div>
-         <div class="welcomeleft">
+      </div>
+      <div class="welcomeleft">
          <div class="text">
-             <h1>WELCOME TO ELURA DECOR</h1>
-<h3>Design Your Life, One Room at a Time</h3>
+            <h1>WELCOME TO ELURA DECOR</h1>
+            <h3>Design Your Life, One Room at a Time</h3>
 
 
 
-<br>
- <p>Elevate your interiors with modern, stylish, and functional decor. Explore pieces that balance beauty and comfort, helping you create a home that feels as good as it looks. </p>
-                 <button ><a href="/html/Shop.html">Shop Now</a></button>
+            <br>
+            <p>Elevate your interiors with modern, stylish, and functional decor. Explore pieces that balance beauty and comfort, helping you create a home that feels as good as it looks. </p>
+            <button><a href="/html/Shop.html">Shop Now</a></button>
 
-      
+
          </div>
-         </div>
-      </section>
-      
+      </div>
+   </section>
 
-      <section class="Explore">
-      
-         
- <div class="CategoriesBanner">
-          <h2>Explore Our Collections</h2>
 
-          <p>
+   <section class="Explore">
+
+
+      <div class="CategoriesBanner">
+         <h2>Explore Our Collections</h2>
+
+         <p>
             Find the perfect piece that reflects your style — from timeless
             classics to modern elegance.
-          </p>
-        </div>
+         </p>
+      </div>
 
-        <div class="CategoriesContainer">
-          <div class="card">
+      <div class="CategoriesContainer">
+         <div class="card">
             <div class="Cimg">
-             <img src="https://i.pinimg.com/736x/5a/c9/da/5ac9da6cdf3af888496399e7019fa771.jpg" alt="">
+               <img src="https://i.pinimg.com/736x/5a/c9/da/5ac9da6cdf3af888496399e7019fa771.jpg" alt="">
             </div>
             <div class="Ctext">
-                <p>BACKYARD DESIGN</p>
-             
-            </div>
-          </div>
+               <p>BACKYARD DESIGN</p>
 
-          <div class="card">
+            </div>
+         </div>
+
+         <div class="card">
             <div class="Cimg">
-                <img src="https://i.pinimg.com/1200x/76/47/66/764766b84b78f36ec3ae0cf037708c81.jpg" alt="">
+               <img src="https://i.pinimg.com/1200x/76/47/66/764766b84b78f36ec3ae0cf037708c81.jpg" alt="">
             </div>
             <div class="Ctext">
-                <p>INTERIOR DESIGN</p>
+               <p>INTERIOR DESIGN</p>
 
             </div>
-          </div>
+         </div>
 
 
-          <div class="card">
-            
+         <div class="card">
+
             <div class="Cimg">
                <img src="https://i.pinimg.com/1200x/6a/c6/a6/6ac6a60b893dc7c1d1a51fad70b0f765.jpg" alt="">
-              
+
             </div>
             <div class="Ctext">
-                <p>SEASONAL DECOR</p>
-              
+               <p>SEASONAL DECOR</p>
+
             </div>
-          </div>
+         </div>
 
 
-          <div class="card">
+         <div class="card">
             <div class="Cimg">
-                <img src="https://i.pinimg.com/1200x/e0/a8/36/e0a83638afb8bf9e5b2a7eeadc63cc18.jpg" alt="">
+               <img src="https://i.pinimg.com/1200x/e0/a8/36/e0a83638afb8bf9e5b2a7eeadc63cc18.jpg" alt="">
             </div>
             <div class="Ctext">
-                <p>DECOR PIECE'S</p>
-                <button></button>
+               <p>DECOR PIECE'S</p>
+               <button></button>
             </div>
-          </div>
-        </div>
-      </section>
-     
-       
+         </div>
+      </div>
+   </section>
 
 
-      <section class="bestSeller">
-        <h2>TAKE A LOOK AT OUR BEST SELLER'S</h2>
-        <div class="slider">
+
+
+   <section class="bestSeller">
+      <h2>TAKE A LOOK AT OUR BEST SELLER'S</h2>
+      <div class="slider">
 
          <div class="post">
             <div class="postimg">
@@ -100,14 +101,14 @@ include_once '../includes/header.php';
 
          </div>
 
-            <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/1200x/fc/13/9d/fc139d0fe02e4138cb7f07a921b975ab.jpg" alt="">
             </div>
 
          </div>
 
-            <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/1200x/98/59/fd/9859fdc396f32bba953b7c8d1e4feee3.jpg" alt="">
             </div>
@@ -115,14 +116,14 @@ include_once '../includes/header.php';
          </div>
 
 
-            <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/736x/67/d3/5d/67d35d72631c56da00af547b7d1bdafc.jpg" alt="">
             </div>
 
          </div>
 
-             <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/1200x/99/f3/d9/99f3d959cbfd2cdb3371a9c26faa4c12.jpg" alt="">
             </div>
@@ -130,7 +131,7 @@ include_once '../includes/header.php';
          </div>
 
 
-             <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/1200x/18/0c/3d/180c3df627a2bf8115e1e0939289879f.jpg" alt="">
             </div>
@@ -138,7 +139,7 @@ include_once '../includes/header.php';
          </div>
 
 
-             <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/736x/0e/19/80/0e1980950828a0f07b7d7e58178a4e9c.jpg" alt="">
             </div>
@@ -147,7 +148,7 @@ include_once '../includes/header.php';
 
 
 
-             <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/736x/f2/39/02/f23902500e0da49b2797bdeab2bec980.jpg" alt="">
             </div>
@@ -156,7 +157,7 @@ include_once '../includes/header.php';
 
 
 
-             <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/736x/5a/cf/34/5acf343023944c34b9d877dccaac1df9.jpg" alt="">
             </div>
@@ -165,7 +166,7 @@ include_once '../includes/header.php';
 
 
 
-             <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/1200x/1b/5b/26/1b5b260d12edef418488e4435cfcfb45.jpg" alt="">
             </div>
@@ -174,77 +175,73 @@ include_once '../includes/header.php';
 
 
 
-             <div class="post">
+         <div class="post">
             <div class="postimg">
                <img src="https://i.pinimg.com/736x/87/fb/ac/87fbac406fce5328c278018e2c5e093b.jpg" alt="">
             </div>
 
          </div>
 
-         
-
-        </div>
-      </section>
-
-
-      
-<section class="whyUs">
-   <div class="whyHolder">
-      <h1>WHY CHOOSE US?</h1>
-
-      <div class="container">
-         <div class="whyCont">
-          <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
-            <p>We believe great design should be accessible to everyone,that's why we offer premium-quality services at fair and transparent prices. Our goal is to give you exceptional results without unnecessary cost.</p>
-         </div>
-      </div>
-
-          <div class="whyCont">
-             <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
-            <p>We take pride in reliable project management and on-time delivery. Every detail is handled with care, from the initial concept to the final setup, so you can enjoy a stress-free experience.</p>
-          </div>
-         </div>
-
-          <div class="whyCont">
-              <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
-            <p>We create interior designs that blend style, comfort, and functionality, ensuring every space feels welcoming and uniquely yours. Our team works closely with each client to understand their vision, delivering thoughtful solutions</p>
-          </div>
-         </div>
-
-          <div class="whyCont">
-              <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
-            <p>With years of experience in interior decoration, our team brings creativity and precision to every project. We focus on crafting designs that match your lifestyle while maintaining high standards of quality.</p>
-          </div>
-         </div>
 
 
       </div>
-   </div>
-</section>
-
-         <section class="newsletter">
- 
- <div class="nccard">
-  <div class="cchold">
-     <h2>Stay in Touch</h2>
-  <p>Join the Elura Circle — Get styling tips, décor trends, and special offers.</p>
-  <form id="newsletter">
-    <input type="email" placeholder="Enter your email" required>
-    <button type="submit" class="Subscribe">Subscribe</button>
-
-  </form>
-  </div>
- </div>
-
-</section>
+   </section>
 
 
 
-    </main>
+   <section class="whyUs">
+      <div class="whyHolder">
+         <h1>WHY CHOOSE US?</h1>
+
+         <div class="container">
+            <div class="whyCont">
+               <div class="text">
+                  <p>We believe great design should be accessible to everyone,that's why we offer premium-quality services at fair and transparent prices. Our goal is to give you exceptional results without unnecessary cost.</p>
+               </div>
+            </div>
+
+            <div class="whyCont">
+               <div class="text">
+                  <p>We take pride in reliable project management and on-time delivery. Every detail is handled with care, from the initial concept to the final setup, so you can enjoy a stress-free experience.</p>
+               </div>
+            </div>
+
+            <div class="whyCont">
+               <div class="text">
+                  <p>We create interior designs that blend style, comfort, and functionality, ensuring every space feels welcoming and uniquely yours. Our team works closely with each client to understand their vision, delivering thoughtful solutions</p>
+               </div>
+            </div>
+
+            <div class="whyCont">
+               <div class="text">
+                  <p>With years of experience in interior decoration, our team brings creativity and precision to every project. We focus on crafting designs that match your lifestyle while maintaining high standards of quality.</p>
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+   </section>
+
+   <section class="newsletter">
+
+      <div class="nccard">
+         <div class="cchold">
+            <h2>Stay in Touch</h2>
+            <p>Join the Elura Circle — Get styling tips, décor trends, and special offers.</p>
+            <form id="newsletter">
+               <input type="email" placeholder="Enter your email" required>
+               <button type="submit" class="Subscribe">Subscribe</button>
+
+            </form>
+         </div>
+      </div>
+
+   </section>
+
+
+
+</main>
 <?php
 
 include_once '../includes/footer.php'
