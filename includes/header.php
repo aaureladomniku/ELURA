@@ -34,34 +34,31 @@ if (session_status() == PHP_SESSION_NONE) {
           <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
     <li class="l"><a href="../html/Dashboard.php">DASHBOARD</a></li>
 <?php endif; ?>
-
+  </ul>
            
           <div class="ic hide">
           <img class="darkModeToggle" src="../images/moonBlack.png" alt="">
           <img src="../images/heartBlack.png" alt="">
          <img src="../images/cartBlack.png" alt=""> 
-
-         <?php if (isset($_SESSION['user_id'])): ?>
-           <a href="../cruds/user/logout.php">LOGOUT</a> 
-            <?php endif;?>
-
+  <?php if (isset($_SESSION['user_id'])): ?>
+  <a class="logout" href="../cruds/user/logout.php">LOGOUT</a>
+<?php endif;?>
           </div>
          
          
-        </ul>
+      
 
            <div class="ic">
           <img class="darkModeToggle" src="../images/moonWhite.png">
                 <img src="../images/heartWhite.png" alt="">
                 <img src="../images/cartWhite.png" alt=""> 
-                
-         <?php if (isset($_SESSION['user_id'])): ?>
-           <a href="../cruds/user/logout.php">LOGOUT</a> 
-            <?php endif;?>
-            
+        
 
-               
+               <?php if (isset($_SESSION['user_id'])): ?>
+  <a class="logout" style="text-decoration:none;font-weight:bold;font-size:17px;color:white;" href="../cruds/user/logout.php">LOGOUT</a>
+<?php endif;?>
         </div>
+        
 
       
 
