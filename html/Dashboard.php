@@ -70,7 +70,7 @@ include_once '../includes/header.php';
                 Update
             </a>
 
-            <form action="deleteUser.inc.php" method="POST">
+            <form action="../cruds/user/deleteUser.inc.php" method="POST">
                 <input type="hidden" name="id" value="<?= $user['id'] ?>">
                 <button type="submit" name="delete" class="btn delete"
                     onclick="return confirm('Delete this user?')">
