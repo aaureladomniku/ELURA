@@ -25,12 +25,12 @@ class SignupController
     public function processSignup()
     {
         if ($this->userCrud->getUserByEmail($this->email)) {
-            header("Location: ../../html/login.php");
+            header("Location: ../../html/log-in.php");
             exit();
         }
 
         $this->userCrud->createUser($this->name, $this->email, $this->password);
-        header("Location: ../../html/login.php");
+        header("Location: ../../html/log-in.php");
         exit();
     }
 }

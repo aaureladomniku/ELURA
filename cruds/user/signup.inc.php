@@ -21,6 +21,6 @@ $signup=new SignupController($name,$email,$password);
 
 }
 else{
-    header("Location: ../../html/signup.php");
+    header("Location: ../../html/sign-up.php");
     exit();
 }

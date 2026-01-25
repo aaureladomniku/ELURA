@@ -50,7 +50,7 @@ if (isset($_SESSION['user_id'])) {
              <input type="submit" value="LogIn" name="submit" class="submit" />
             
               <span class="signUp">Don't have an account?
-              <a href="sign-up.html">Sign-Up</a></span>
+              <a href="sign-up.php">Sign-Up</a></span>
 
              </form>
 
