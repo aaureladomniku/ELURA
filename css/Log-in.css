@@ -145,7 +145,7 @@ input.Error::placeholder {
 
 @media (max-width: 768px) {
   .LoginHolder {
-    width: 90%;
+    width: 80%;
     padding: 30px;
   }
 
@@ -162,7 +162,7 @@ input.Error::placeholder {
 
 @media (min-width: 768px) {
   .LoginHolder {
-    width: 70%;
+    width: 60%;
     padding: 40px;
   }
 
@@ -192,17 +192,18 @@ input.Error::placeholder {
 
 @media (max-width: 480px) {
   .LoginHolder {
-    width: 95%;
+    width: 90%;
     padding: 20px;
   }
 
   .LoginTitle {
     font-size: 28px;
     margin: 20px auto;
+    margin-bottom: 20px;
   }
 
   .LoginRight h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   form {

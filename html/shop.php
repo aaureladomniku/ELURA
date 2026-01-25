@@ -8,6 +8,7 @@ $posts=$productCrud->readAllProducts();
 ?>
 <head>
   <link rel="stylesheet" href="../css/shop.css">
+  <script src="../js/shop.js" defer></script>
 </head>
 
     <main>

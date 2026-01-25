@@ -133,3 +133,19 @@ input.error:focus {
   margin-bottom: 5px;
 }
 
+
+@media(max-width:500px){
+  form{
+    width: 100%;
+   
+  }
+  input{
+    width:80%
+  }
+}
+
+@media(max-width:750px){
+  input{
+    width: 60%;
+  }
+}

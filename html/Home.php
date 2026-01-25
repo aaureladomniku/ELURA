@@ -1,10 +1,12 @@
-<?php
-include_once '../includes/header.php';
-?>
 
 <head>
    <link rel="stylesheet" href="../css/Home.css">
 </head>
+
+<?php
+include_once '../includes/header.php';
+?>
+
 <main>
 
    <section class="HomeWelcomeContainer">

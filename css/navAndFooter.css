@@ -184,7 +184,7 @@ nav .ic img {
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1050px) {
   #burger {
     display: block;
   }

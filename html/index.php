@@ -14,8 +14,8 @@
         <h3>eluraDecor</h3>
 
         <ul  id="menu">
-          <li class="l"><a  href="log-in.html">LogIn</a></li>
-          <li class="l"><a href="sign-up.html">SignUp </a></li>
+          <li class="l"><a  href="log-in.php">LogIn</a></li>
+          <li class="l"><a href="sign-up.php">SignUp </a></li>
         </ul>
            <div id="burger">☰</div>
           
