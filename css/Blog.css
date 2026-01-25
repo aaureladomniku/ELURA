@@ -125,7 +125,7 @@ section h2 {
     display: inline-block;
     padding: 12px 30px;
     background-color: var(--btn-bg);
-    color:var(--btn-txt);
+    color: var(--btn-txt);
     text-decoration: none;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -163,15 +163,15 @@ section h2 {
 }
 
 .palette-flex {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 0px auto;
-  
-   flex-wrap: wrap;
-   height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+
+    flex-wrap: wrap;
+    height: auto;
     gap: 10px;
-    
+
 }
 
 .palette-card img {
@@ -215,8 +215,9 @@ section h2 {
     justify-content: center;
     margin-top: 30px;
 }
-.faq-title{
-    color:var(--title-color)
+
+.faq-title {
+    color: var(--title-color)
 }
 
 .faq-message {
@@ -245,41 +246,47 @@ section h2 {
     transform: translateY(-3px);
 }
 
+
+
 @media (max-width: 1024px) {
     .video-container {
-        flex-direction: column;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-top: 40px;
     }
-}
 
-@media (max-width: 768px) {
     .video-box {
         display: none;
     }
 
     .video-box:first-child {
         display: block;
-        width: 100%;
-        height: auto;
+        width: 100vw;
+        height: 75vh;
+        max-width: none;
     }
+}
 
-    .palette-card img {
-        width: 90%;
-        height: auto;
+
+@media (max-width: 900px) {
+    .video-box:first-child {
+        height: 70vh;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .video-box:first-child {
+        height: 60vh;
     }
 }
 
 @media (max-width: 480px) {
-    .blog-section {
-        flex-direction: column;
-        padding: 10px 5% 20px 5%;
+    .video-box:first-child {
+        height: 50vh;
     }
-
-    .blog-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 80px 0 0 80px;
-    }
-    
-
-
 }
