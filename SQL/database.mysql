@@ -21,3 +21,21 @@ CREATE TABLE posts (
     rating DECIMAL(2,1) ,
     reviews_count INT 
 );
+
+
+CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(30) NULL,
+    email VARCHAR(100) NULL,
+    user_id INT NULL,
+    message TEXT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_messages_users
+        FOREIGN KEY (user_id)
+        REFERENCES users(id)
+        ON DELETE SET NULL
+);
+
+
