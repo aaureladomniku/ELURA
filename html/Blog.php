@@ -125,7 +125,7 @@ include_once '../includes/header.php'
                 <p class="faq-message">If you have a question, leave us a message:</p>
 
                 <div class="faq-button">
-                    <a href="contact.html">Contact Us</a>
+                    <a href="Contact.php">Contact Us</a>
                 </div>
             </div>
         </section>
