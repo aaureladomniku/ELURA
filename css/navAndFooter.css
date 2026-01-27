@@ -184,6 +184,13 @@ nav .ic img {
 
 }
 
+.logout{
+ text-decoration:none;
+ font-weight:bold;
+ font-size:17px;
+ color:var(--bg-menu);
+}
+
 @media (max-width: 1050px) {
   #burger {
     display: block;

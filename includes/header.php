@@ -60,7 +60,7 @@ if (session_status() == PHP_SESSION_NONE) {
         
 
                <?php if (isset($_SESSION['user_id'])): ?>
-  <a class="logout" style="text-decoration:none;font-weight:bold;font-size:17px;color:white;" href="../cruds/user/logout.php">LOGOUT</a>
+  <a class="logout"  href="../cruds/user/logout.php">LOGOUT</a>
 <?php endif;?>
         </div>
         

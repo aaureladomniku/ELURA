@@ -89,10 +89,9 @@ include_once '../includes/header.php';
 
     </table>
 
-    <br>
-    <br>
+    
 
-
+     <h1 class="dashboard-title">PRODUCT DASHBOARD</h1>
     <div class="product">
         <div class="table">
 

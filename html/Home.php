@@ -22,7 +22,7 @@ include_once '../includes/header.php';
 
             <br>
             <p>Elevate your interiors with modern, stylish, and functional decor. Explore pieces that balance beauty and comfort, helping you create a home that feels as good as it looks. </p>
-            <button><a href="/html/Shop.html">Shop Now</a></button>
+            <button><a href="../html/shop.php">Shop Now</a></button>
 
 
          </div>
