@@ -48,7 +48,7 @@ include_once '../includes/header.php';
 
 
     <h1 class="dashboard-title">USERS DASHBOARD</h1>
-
+<div class="table-wrapper">
     <table class="admin-table">
         <thead>
             <tr>
@@ -88,13 +88,15 @@ include_once '../includes/header.php';
 
 
     </table>
+</div>
 
     
 
      <h1 class="dashboard-title">PRODUCT DASHBOARD</h1>
     <div class="product">
+         <div class="table-wrapper">
         <div class="table">
-
+     
             <table class="post-table">
                 <thead>
                     <tr>
@@ -135,11 +137,17 @@ include_once '../includes/header.php';
                     <?php endforeach; ?>
                 </tbody>
             </table>
+      </div>
 
         </div>
 
 
-        <div class="CreateForm">
+     
+
+    </div>
+
+
+       <div class="CreateForm">
 
             <form action="../cruds/product/createForm.inc.php" method="POST" enctype="multipart/form-data">
                 <div class="title">
@@ -174,16 +182,11 @@ include_once '../includes/header.php';
 
         </div>
 
-    </div>
 
 
-
-
-    <br>
-    <br>
 
     <h1 class="dashboard-title">MESSAGES DASHBOARD</h1>
-
+<div class="table-wrapper">
     <table class="admin-table">
         <thead>
             <tr>
@@ -218,7 +221,9 @@ include_once '../includes/header.php';
     </table>
 
 
-    <br><br>
+</div>
+
+   
 
 
 </main>
