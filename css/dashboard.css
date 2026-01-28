@@ -13,7 +13,7 @@ td {
 
 
 .table-wrapper {
-  width: 91%;
+  width: 94%;
   overflow-x: auto;
   margin: 20px auto;
 }
@@ -21,7 +21,7 @@ td {
 .admin-table,
 .post-table {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 20px auto;
   border-collapse: collapse;
   background: #fff;
@@ -40,7 +40,7 @@ td {
 .admin-table td,
 .post-table th,
 .post-table td {
-  padding: 14px 16px;
+  padding: 10px 13px;
 }
 
 .admin-table tbody tr,
