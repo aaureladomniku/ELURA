@@ -1,3 +1,8 @@
+<head>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../js/update.js" defer></script>
+</head>
+
 <?php
 
 if (session_status() == PHP_SESSION_NONE) {
@@ -40,9 +45,7 @@ include_once '../includes/header.php';
 
 
 
-<head>
-    <link rel="stylesheet" href="../css/dashboard.css">
-</head>
+
 <main>
 
 
@@ -149,7 +152,7 @@ include_once '../includes/header.php';
 
        <div class="CreateForm">
 
-            <form action="../cruds/product/createForm.inc.php" method="POST" enctype="multipart/form-data">
+            <form action="../cruds/product/createForm.inc.php"  id="post" method="POST" enctype="multipart/form-data">
                 <div class="title">
                     <h3>CREATE/ADD A PRODUCT</h3>
                 </div>

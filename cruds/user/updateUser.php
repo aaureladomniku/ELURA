@@ -14,13 +14,14 @@ $user = $userCrud->getUserById($id);
     <title>Update User</title>
 
    <link rel="stylesheet" href="../../css/update.css">
+   <script src="../../js/update.js" ddefer></script>
 
 </head>
 
 <body>
 
 
-    <form action="updateuser.inc.php" method="POST">
+    <form  id="update" action="updateuser.inc.php" method="POST">
 
 
         <h2>Update User</h2>
@@ -28,9 +29,11 @@ $user = $userCrud->getUserById($id);
 
         <label>Name:</label>
         <input type="text" name="name" value="<?= htmlspecialchars($user['name']) ?>">
+        <div class="nameError"></div>
 
         <label>Email:</label>
         <input type="email" name="email" value="<?= htmlspecialchars($user['email']) ?>">
+        <div class="emailError"></div>
 
         <button type="submit" name="update">Update</button>
     </form>
