@@ -51,182 +51,183 @@ include_once '../includes/header.php';
 
 
     <h1 class="dashboard-title">USERS DASHBOARD</h1>
-<div class="table-wrapper">
-    <table class="admin-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Date</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-
-        <tbody>
-
-        <tbody>
-            <?php foreach ($users as $user): ?>
+    <div class="table-wrapper">
+        <table class="admin-table">
+            <thead>
                 <tr>
-                    <td><?= $user['id'] ?></td>
-                    <td><?= htmlspecialchars($user['name']) ?></td>
-                    <td><?= htmlspecialchars($user['email']) ?></td>
-                    <td><?= htmlspecialchars($user['created_at']) ?></td>
-                    <td class="actions">
-                        <a href="../cruds/user/updateUser.php?id=<?= $user['id'] ?>" class="btn update">
-                            Update
-                        </a>
-
-                        <form action="../cruds/user/deleteUser.inc.php" method="POST">
-                            <input type="hidden" name="id" value="<?= $user['id'] ?>">
-                            <button type="submit" name="delete" class="btn delete"
-                                onclick="return confirm('Delete this user?')">
-                                Delete
-                            </button>
-                        </form>
-                    </td>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Actions</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
+            </thead>
 
+            <tbody>
 
-    </table>
-</div>
-
-    
-
-     <h1 class="dashboard-title">PRODUCT DASHBOARD</h1>
-    <div class="product">
-         <div class="table-wrapper">
-        <div class="table">
-     
-            <table class="post-table">
-                <thead>
+            <tbody>
+                <?php foreach ($users as $user): ?>
                     <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>price</th>
-                        <th>Actions</th>
+                        <td><?= $user['id'] ?></td>
+                        <td><?= htmlspecialchars($user['name']) ?></td>
+                        <td><?= htmlspecialchars($user['email']) ?></td>
+                        <td><?= htmlspecialchars($user['created_at']) ?></td>
+                        <td class="actions">
+                            <a href="../cruds/user/updateUser.php?id=<?= $user['id'] ?>" class="btn update">
+                                Update
+                            </a>
+
+                            <form action="../cruds/user/deleteUser.inc.php" method="POST">
+                                <input type="hidden" name="id" value="<?= $user['id'] ?>">
+                                <button type="submit" name="delete" class="btn delete"
+                                    onclick="return confirm('Delete this user?')">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
                     </tr>
-                </thead>
+                <?php endforeach; ?>
+            </tbody>
 
-                <tbody>
-                    <!-- ONE ROW ONLY -->
-                    <?php foreach ($posts as $p): ?>
 
+        </table>
+    </div>
+
+
+
+    <h1 class="dashboard-title">PRODUCT DASHBOARD</h1>
+    <div class="product">
+        <div class="table-wrapper">
+            <div class="table">
+
+                <table class="post-table">
+                    <thead>
                         <tr>
-                            <td><?= $p['id'] ?></td>
-                            <td><?= $p['title'] ?></td>
-                            <td><?= $p['description'] ?></td>
-                            <td><?= $p['price'] ?></td>
-
-
-                            <td class="actions">
-                                <a href="../cruds/product/updateProductForm.php?id=<?= $p['id'] ?>" class="btn update">
-                                    Update
-                                </a>
-
-
-                                <form action="../cruds/product/deletePost.inc.php" method="POST">
-                                    <input type="hidden" name="id" value="<?= $p['id'] ?>">
-                                    <button type="submit" name="delete" class="btn delete"
-                                        onclick="return confirm('Delete this user?')">
-                                        Delete
-                                    </button>
-                                </form>
-                            </td>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>price</th>
+                            <th>Actions</th>
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-      </div>
+                    </thead>
+
+                    <tbody>
+                        <!-- ONE ROW ONLY -->
+                        <?php foreach ($posts as $p): ?>
+
+                            <tr>
+                                <td><?= $p['id'] ?></td>
+                                <td><?= $p['title'] ?></td>
+                                <td><?= $p['description'] ?></td>
+                                <td><?= $p['price'] ?></td>
+
+
+                                <td class="actions">
+                                    <a href="../cruds/product/updateProductForm.php?id=<?= $p['id'] ?>" class="btn update">
+                                        Update
+                                    </a>
+
+
+                                    <form action="../cruds/product/deletePost.inc.php" method="POST">
+                                        <input type="hidden" name="id" value="<?= $p['id'] ?>">
+                                        <button type="submit" name="delete" class="btn delete"
+                                            onclick="return confirm('Delete this user?')">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
 
 
-     
+
 
     </div>
 
 
-       <div class="CreateForm">
+    <div class="CreateForm">
 
-            <form action="../cruds/product/createForm.inc.php"  id="post" method="POST" enctype="multipart/form-data">
-                <div class="title">
-                    <h3>CREATE/ADD A PRODUCT</h3>
-                </div>
-                <div class="formField">
-                    <label for="title">Title:</label>
-                    <input type="text" id="title" name="title" placeholder="Title">
-                    <span class="error" id="TitleError"></span>
-                </div>
+        <form action="../cruds/product/createForm.inc.php" id="post" method="POST" enctype="multipart/form-data">
+            <div class="title">
+                <h3>CREATE/ADD A PRODUCT</h3>
+            </div>
+            <div class="formField">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Title">
+                <span class="error" id="TitleError"></span>
+            </div>
 
-                <div class="formField">
-                    <label for="description">Description:</label>
-                    <textarea type="text" id="description" name="description" placeholder="Description"></textarea>
-                    <span class="error" id="DescriptionError"></span>
-                </div>
+            <div class="formField">
+                <label for="description">Description:</label>
+                <textarea type="text" id="description" name="description" placeholder="Description"></textarea>
+                <span class="error" id="DescriptionError"></span>
+            </div>
 
-                <div class="formField">
-                    <label for="price">Price:</label>
-                    <input type="text" id="price" name="price" placeholder="Price">
-                    <span class="error" id="PriceError"></span>
-                </div>
+            <div class="formField">
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" placeholder="Price">
+                <span class="error" id="PriceError"></span>
+            </div>
 
-                <div class="formField">
-                    <label for="img">Image:</label>
-                    <input type="file" id="img" name="img" class="fileInput">
-                    <span class="error" id="ImageError"></span>
-                </div>
-                <button type='submit' name='submit' class='submit'>SUBMIT</button>
+            <div class="formField">
+                <label for="img">Image:</label>
+                <input type="file" id="img" name="img" class="fileInput">
+                <span class="error" id="ImageError"></span>
+            </div>
+            <button type='submit' name='submit' class='submit'>SUBMIT</button>
 
-            </form>
+        </form>
 
-        </div>
+    </div>
 
 
 
 
     <h1 class="dashboard-title">MESSAGES DASHBOARD</h1>
-<div class="table-wrapper">
-    <table class="admin-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Message</th>
-                <th>Date</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($messages as $m): ?>
+    <div class="table-wrapper">
+        <table class="admin-table">
+            <thead>
                 <tr>
-                    <td><?= htmlspecialchars($m['user_name'] ?? $m['visitor_name']) ?></td>
-                    <td><?= htmlspecialchars($m['phone']) ?></td>
-                    <td><?= htmlspecialchars($m['user_email'] ?? $m['visitor_email']) ?></td>
-                    <td><?= htmlspecialchars($m['message']) ?></td>
-                    <td><?= htmlspecialchars($m['created_at']) ?></td>
-
-                    <td class="actions">
-                        <a href="../cruds/contact/updateMessage.php?id=<?= $m['id'] ?>" class="btn update">Update</a>
-                        <form action="../cruds/contact/deleteMessage.inc.php" method="POST">
-                            <input type="hidden" name="id" value="<?= $m['id'] ?>">
-                            <button type="submit" name="delete" class="btn delete"
-                                onclick="return confirm('Delete this message?')">Delete</button>
-                        </form>
-                    </td>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                    <th>Actions</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php foreach ($messages as $m): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($m['user_name'] ?? $m['visitor_name']) ?></td>
+                        <td><?= htmlspecialchars($m['phone']) ?></td>
+                        <td><?= htmlspecialchars($m['user_email'] ?? $m['visitor_email']) ?></td>
+                        <td><?= htmlspecialchars($m['message']) ?></td>
+                        <td><?= htmlspecialchars($m['created_at']) ?></td>
+
+                        <td class="actions">
+                            <a href="../cruds/contact/updateMessage.php?id=<?= $m['id'] ?>" class="btn update">Update</a>
+                            <form action="../cruds/contact/deleteContact.inc.php" method="POST">
+                                <input type="hidden" name="id" value="<?= $m['id'] ?>">
+                                <button type="submit" name="delete" class="btn delete"
+                                    onclick="return confirm('Delete this message?')">Delete</button>
+                            </form>
+
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
 
 
-</div>
+    </div>
 
-   
+
 
 
 </main>
