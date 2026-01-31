@@ -60,7 +60,7 @@ include_once '../includes/header.php';
         <div id="emailError" aria-live="polite"></div>
         <textarea name="message" placeholder="MESSAGE" required></textarea>
         <div id="textError" aria-live="polite"></div>
-        <button type="submit" name="send" class="submit">SUBMIT</button>
+        <button type="submit" name="message" class="submit">SUBMIT</button>
       </form>
 
 
