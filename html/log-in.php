@@ -12,6 +12,9 @@ if (isset($_SESSION['user_id'])) {
     }
     exit();
 }
+
+$error = $_SESSION['login_error'] ?? '';
+unset($_SESSION['login_error']);
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +47,10 @@ if (isset($_SESSION['user_id'])) {
 
              <input  class ="userPassword" name='password'  type="password" placeholder="password" required />
              <span class="PasswordError" aria-live="polite"></span>
+
+              <?php if ($error): ?>
+              <div class="Error"><?= htmlspecialchars($error) ?></div>
+              <?php endif; ?>
 
              <span class="forgot">Forgot ur password?</span>
 

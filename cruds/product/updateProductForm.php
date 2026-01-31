@@ -22,7 +22,7 @@ $post = $product->getProductById($id);
 <body>
 
 
-<form action="updateProduct.inc.php" id="updateForm"  method="POST">
+<form action="updateProduct.inc.php" id="update"  method="POST">
 
 
 <h2>Update Product</h2>
@@ -30,12 +30,12 @@ $post = $product->getProductById($id);
     
 
     <label>Title:</label>
-    <input type="text" name="upTitle" aria-live="polite" value="<?= htmlspecialchars($post['title']) ?>">
-    <div class="titleError"></div>
+    <input type="text" name="upTitle"  value="<?= htmlspecialchars($post['title']) ?>">
+    <div class="titleError" aria-live="polite"></div>
 
     <label for="">Description</label>
-    <input type="text" name="upDescription" aria-live="polite"  value="<?= htmlspecialchars($post['description']) ?>">
-   <div class="descError"></div>
+    <input type="text" name="upDescription" value="<?= htmlspecialchars($post['description']) ?>">
+   <div class="descError" aria-live="polite"  ></div>
 
     
     <label for="">Price</label>

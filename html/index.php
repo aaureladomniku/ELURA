@@ -37,7 +37,7 @@
 
 <br>
  <p>Elevate your interiors with modern, stylish, and functional decor. Explore pieces that balance beauty and comfort, helping you create a home that feels as good as it looks. </p>
-                 <button ><a href="/html/Shop.html">Shop Now</a></button>
+                 <button ><a href="../html/shop.php">Shop Now</a></button>
 
       
          </div>
@@ -213,28 +213,28 @@
       <div class="container">
          <div class="whyCont">
           <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
+            
             <p>We believe great design should be accessible to everyone,that's why we offer premium-quality services at fair and transparent prices. Our goal is to give you exceptional results without unnecessary cost.</p>
          </div>
       </div>
 
           <div class="whyCont">
              <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
+            
             <p>We take pride in reliable project management and on-time delivery. Every detail is handled with care, from the initial concept to the final setup, so you can enjoy a stress-free experience.</p>
           </div>
          </div>
 
           <div class="whyCont">
               <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
+            
             <p>We create interior designs that blend style, comfort, and functionality, ensuring every space feels welcoming and uniquely yours. Our team works closely with each client to understand their vision, delivering thoughtful solutions</p>
           </div>
          </div>
 
           <div class="whyCont">
               <div class="text">
-            <img src="/foto/icons8-interior-30.png" alt="">
+            
             <p>With years of experience in interior decoration, our team brings creativity and precision to every project. We focus on crafting designs that match your lifestyle while maintaining high standards of quality.</p>
           </div>
          </div>

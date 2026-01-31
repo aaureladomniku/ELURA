@@ -24,19 +24,19 @@ $message = $contactCrud->getMessageById($id);
 
         <label>Name:</label>
         <input type="text" name="name" value="<?= htmlspecialchars($message['name']) ?>">
-        <span class="nameError error"></span>
+        <div class="nameError" aria-live="polite"></div>
 
         <label>Phone:</label>
         <input type="text" name="phone" value="<?= htmlspecialchars($message['phone']) ?>">
-        <span class="phoneError error"></span>
+        <div class="phoneError" aria-live="polite"></div>
 
         <label>Email:</label>
         <input type="email" name="email" value="<?= htmlspecialchars($message['email']) ?>">
-        <span class="emailError error"></span>
+        <div class="emailError" aria-live="polite"></div>
 
         <label>Message:</label>
         <textarea name="message"><?= htmlspecialchars($message['message']) ?></textarea>
-        <span class="messageError error"></span>
+        <div class="messageError" aria-live="polite"></div>
 
         <button type="submit" name="update">Update</button>
     </form>

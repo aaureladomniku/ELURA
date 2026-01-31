@@ -1,11 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ELURA</title>
+     <link rel="stylesheet" href="../css/contact.css">
+  <script src="../js/contactValidation.js" defer></script>
+   <link rel="stylesheet" href="../css/navAndFooter.css">
+   <link rel="stylesheet" href="../css/darkMode.css">
+   <script src="../js/burgermenu.js" defer></script>
+   
+  
+</head>
+
 <?php
 
 include_once '../includes/header.php';
 ?>
 
-<head>
-  <link rel="stylesheet" href="../css/contact.css">
-</head>
 <main>
   <div class="container">
     <div class="left">
@@ -24,7 +37,7 @@ include_once '../includes/header.php';
         <p class="label">ADDRESS</p>
         <p>Bill-Clinton Address<br />City, Prishtinë</p>
 
-        <p class="label">SOCIAL</p>
+        <p class="label">SOCIAL'S</p>
         <div class="social">
           <p>eluradecor-instagram</p>
           <p>eluraDecor-facebook</p>
@@ -38,11 +51,15 @@ include_once '../includes/header.php';
     </div>
 
     <div class="right">
-      <form method="post" action="../cruds/contact/createMessage.inc.php" novalidate>
+      <form method="POST" action="../cruds/contact/createMessage.inc.php" novalidate>
         <input type="text" name="name" placeholder="NAME" required />
+        <div id="nameError" aria-live="polite"></div>
         <input type="text" name="phone" placeholder="PHONE" />
+        <div id="phoneError" aria-live="polite"></div>
         <input type="email" name="email" placeholder="EMAIL" required />
+        <div id="emailError" aria-live="polite"></div>
         <textarea name="message" placeholder="MESSAGE" required></textarea>
+        <div id="textError" aria-live="polite"></div>
         <button type="submit" name="send" class="submit">SUBMIT</button>
       </form>
 

@@ -1,4 +1,4 @@
-const nameRegex = /^[A-Za-z]{2,20}$/;
+const nameRegex = /^[A-Za-z\s]{2,20}$/;
 const phoneRegex = /^[0-9]{6,20}$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -59,11 +59,8 @@ form.addEventListener("submit", function (e) {
     textError.textContent = "Message cannot be empty";
     isValid = false;
   }
-
-  if (isValid) {
-    alert(
-      "we recived your message we will get back to you as quick as we can!"
-    );
-    form.reset();
+ if (isValid) {
+    form.submit(); 
   }
+
 });

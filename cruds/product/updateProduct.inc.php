@@ -1,6 +1,7 @@
 <?php
 
-
+session_start();
+$updatedBy = $_SESSION['user_id'];
 require_once 'productCrud.php';
 
 if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['update'])){
@@ -11,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['update'])){
 
 
 $productCrud=new productCrud();
-$productCrud->updateProduct($id,$title,$description,$price);
+$productCrud->updateProduct($id,$title,$description,$price,$updatedBy);
 
 header("Location: ../../html/dashboard.php");
 exit;

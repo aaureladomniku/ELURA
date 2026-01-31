@@ -18,20 +18,20 @@ class LoginController
 
     public function processLogin()
     {
+        
+        session_start();
+        
         $user = $this->userCrud->getUserByEmail($this->email);
 
-        if (!$user) {
-          header("Location: ../../html/log-in.php");
-            exit();
-        }
-
-        if (!password_verify($this->password, $user['password'])){
-         header("Location: ../../html/log-in.php");
-            exit();
-        }
+       if (!$user || !password_verify($this->password, $user['password'])) {
+    
+    $_SESSION['login_error'] = "Wrong email or password.";
+    header("Location: ../../html/log-in.php");
+    exit();
+}
 
 
-        session_start();
+
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_email'] = $user['email'];
         $_SESSION['user_role'] = $user['role'];

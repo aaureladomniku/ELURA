@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         titleError.classList.add("Error");
         titleError.textContent = "Title cannot be empty";
         hasError = true;
-      }
+      } 
       else if (!titleRegex.test(title.value.trim())) {
         title.classList.add("Error");
         titleError.classList.add("Error");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         descError.classList.add("Error");
         descError.textContent = "Description cannot be empty";
         hasError = true;
-      }
+      } 
       else if (!descRegex.test(description.value.trim())) {
         description.classList.add("Error");
         descError.classList.add("Error");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         priceError.classList.add("Error");
         priceError.textContent = "Price cannot be empty";
         hasError = true;
-      }
+      } 
       else if (!priceRegex.test(price.value.trim())) {
         price.classList.add("Error");
         priceError.classList.add("Error");
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nameError.textContent = "Name cannot be empty";
         hasError = true;
       }
-      else if (!nameRegex.test(name.value.trim())) {
+       else if (!nameRegex.test(name.value.trim())) {
         name.classList.add("Error");
         nameError.classList.add("Error");
         nameError.textContent = "Name must be 3–20 letters only";
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         emailError.classList.add("Error");
         emailError.textContent = "Email cannot be empty";
         hasError = true;
-      }
+      } 
       else if (!emailRegex.test(email.value.trim())) {
         email.classList.add("Error");
         emailError.classList.add("Error");
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!title.value.trim()) {
         titleError.textContent = "Title cannot be empty";
         hasError = true;
-      }
+      } 
       else if (!titleRegex.test(title.value.trim())) {
         titleError.textContent = "Title must be letters only (min-5, max-25)";
         hasError = true;
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!description.value.trim()) {
         descriptionError.textContent = "Description cannot be empty";
         hasError = true;
-      }
+      } 
       else if (!descRegex.test(description.value.trim())) {
         descriptionError.textContent =
           "Description must be at least 5 characters";
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         priceError.textContent = "Price cannot be empty";
         hasError = true;
       }
-      else if (!priceRegex.test(price.value.trim())) {
+       else if (!priceRegex.test(price.value.trim())) {
         priceError.textContent = "Price must be a valid number";
         hasError = true;
       }
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         imageError.textContent = "Image is required";
         hasError = true;
       }
-      else if (!imageRegex.test(image.value)) {
+       else if (!imageRegex.test(image.value)) {
         imageError.textContent = "Only jpg, jpeg, png allowed";
         hasError = true;
       }
@@ -185,85 +185,86 @@ document.addEventListener("DOMContentLoaded", () => {
       if (hasError) e.preventDefault();
     });
   }
-});
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("#updateMessageForm");
-  if (!form) return;
 
-  const name = form.querySelector("input[name='name']");
-  const phone = form.querySelector("input[name='phone']");
-  const email = form.querySelector("input[name='email']");
-  const message = form.querySelector("textarea[name='message']");
+  const updateMessageForm = document.querySelector("#updateMessageForm");
+if (updateMessageForm) {
+  const name = updateMessageForm.querySelector("input[name='name']");
+  const phone = updateMessageForm.querySelector("input[name='phone']");
+  const email = updateMessageForm.querySelector("input[name='email']");
+  const message = updateMessageForm.querySelector("textarea[name='message']");
 
-  const nameError = form.querySelector(".nameError");
-  const phoneError = form.querySelector(".phoneError");
-  const emailError = form.querySelector(".emailError");
-  const messageError = form.querySelector(".messageError");
+  const nameError = updateMessageForm.querySelector(".nameError");
+  const phoneError = updateMessageForm.querySelector(".phoneError");
+  const emailError = updateMessageForm.querySelector(".emailError");
+  const messageError = updateMessageForm.querySelector(".messageError");
 
   const nameRegex = /^[A-Za-z\s]{3,30}$/;
   const phoneRegex = /^[0-9+\s]{8,15}$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/;
   const messageRegex = /^.{5,500}$/;
 
-  function removeError(input, errorDiv) {
-    input.addEventListener("input", () => {
-      input.classList.remove("Error");
-      errorDiv.textContent = "";
-    });
-  }
-
   removeError(name, nameError);
   removeError(phone, phoneError);
   removeError(email, emailError);
   removeError(message, messageError);
 
-  form.addEventListener("submit", (e) => {
+  updateMessageForm.addEventListener("submit", (e) => {
     let hasError = false;
 
     if (!name.value.trim()) {
       name.classList.add("Error");
+      nameError.classList.add("Error");
       nameError.textContent = "Name cannot be empty";
       hasError = true;
     } else if (!nameRegex.test(name.value.trim())) {
       name.classList.add("Error");
+      nameError.classList.add("Error");
       nameError.textContent = "Name must be 3-30 letters";
       hasError = true;
     }
 
     if (!phone.value.trim()) {
       phone.classList.add("Error");
+      phoneError.classList.add("Error");
       phoneError.textContent = "Phone cannot be empty";
       hasError = true;
     } else if (!phoneRegex.test(phone.value.trim())) {
       phone.classList.add("Error");
+      phoneError.classList.add("Error");
       phoneError.textContent = "Phone must be 8-15 digits";
       hasError = true;
     }
 
     if (!email.value.trim()) {
       email.classList.add("Error");
+      emailError.classList.add("Error");
       emailError.textContent = "Email cannot be empty";
       hasError = true;
     } else if (!emailRegex.test(email.value.trim())) {
       email.classList.add("Error");
+      emailError.classList.add("Error");
       emailError.textContent = "Invalid email format";
       hasError = true;
     }
 
     if (!message.value.trim()) {
       message.classList.add("Error");
+      messageError.classList.add("Error");
       messageError.textContent = "Message cannot be empty";
       hasError = true;
     } else if (!messageRegex.test(message.value.trim())) {
       message.classList.add("Error");
+      messageError.classList.add("Error");
       messageError.textContent = "Message must be 5-500 characters";
       hasError = true;
     }
 
-    if (hasError) {
-      e.preventDefault();
-    }
+    if (hasError) e.preventDefault();
   });
+}
+
 });
+
+

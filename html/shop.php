@@ -6,10 +6,23 @@ include_once '../cruds/product/productCrud.php';
 $productCrud=new productCrud();
 $posts=$productCrud->readAllProducts();
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="../css/shop.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ELURA</title>
+     <link rel="stylesheet" href="../css/shop.css">
   <script src="../js/shop.js" defer></script>
+   <link rel="stylesheet" href="../css/navAndFooter.css">
+   <link rel="stylesheet" href="../css/darkMode.css">
+   <script src="../js/burgermenu.js" defer></script>
+   
+  
 </head>
+
 
     <main>
 

@@ -22,7 +22,9 @@ class productCrud extends DbConnection{
 }
 
     public function readAllProducts(){
-         $sql='SELECT * FROM posts';
+         $sql = 'SELECT p.*, u.name AS updated_by_name
+            FROM posts p
+            LEFT JOIN users u ON p.updated_by = u.id';
          $stmt=$this->getConn()->prepare($sql);
           $stmt->execute();
           return $stmt->fetchAll();
@@ -34,17 +36,19 @@ class productCrud extends DbConnection{
         return $stmt->execute([$id]);
     }
 
-  public function updateProduct($id, $title, $description, $price) {
+  public function updateProduct($id, $title, $description, $price, $updatedBy) {
     $sql = 'UPDATE posts
             SET title = ?, 
                 description = ?, 
-                price = ?
+                price = ?,
+                updated_by = ?
             WHERE id = ?';
     $stmt = $this->getConn()->prepare($sql);
     return $stmt->execute([
         $title,
         $description,
         $price,
+        $updatedBy,
         $id
     ]);
 

@@ -1,7 +1,20 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/dashboard.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ELURA</title>
+     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="../js/update.js" defer></script>
+   <link rel="stylesheet" href="../css/navAndFooter.css">
+   <link rel="stylesheet" href="../css/darkMode.css">
+   <script src="../js/burgermenu.js" defer></script>
+   
+  
 </head>
+
 
 <?php
 
@@ -106,8 +119,10 @@ include_once '../includes/header.php';
                             <th>ID</th>
                             <th>Title</th>
                             <th>Description</th>
-                            <th>price</th>
+                            <th>Price</th>
+                            <th>Updated</th>
                             <th>Actions</th>
+                            <th class="createBtn"><a href="../cruds/product/createProduct.php">ADD PRODUCT</a></th>
                         </tr>
                     </thead>
 
@@ -120,6 +135,7 @@ include_once '../includes/header.php';
                                 <td><?= $p['title'] ?></td>
                                 <td><?= $p['description'] ?></td>
                                 <td><?= $p['price'] ?></td>
+                                <td><?= htmlspecialchars($p['updated_by_name'] ?? 'not updated') ?></td>
 
 
                                 <td class="actions">
@@ -146,42 +162,6 @@ include_once '../includes/header.php';
 
 
 
-
-    </div>
-
-
-    <div class="CreateForm">
-
-        <form action="../cruds/product/createForm.inc.php" id="post" method="POST" enctype="multipart/form-data">
-            <div class="title">
-                <h3>CREATE/ADD A PRODUCT</h3>
-            </div>
-            <div class="formField">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" placeholder="Title">
-                <span class="error" id="TitleError"></span>
-            </div>
-
-            <div class="formField">
-                <label for="description">Description:</label>
-                <textarea type="text" id="description" name="description" placeholder="Description"></textarea>
-                <span class="error" id="DescriptionError"></span>
-            </div>
-
-            <div class="formField">
-                <label for="price">Price:</label>
-                <input type="text" id="price" name="price" placeholder="Price">
-                <span class="error" id="PriceError"></span>
-            </div>
-
-            <div class="formField">
-                <label for="img">Image:</label>
-                <input type="file" id="img" name="img" class="fileInput">
-                <span class="error" id="ImageError"></span>
-            </div>
-            <button type='submit' name='submit' class='submit'>SUBMIT</button>
-
-        </form>
 
     </div>
 
