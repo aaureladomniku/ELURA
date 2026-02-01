@@ -5,6 +5,10 @@ include_once '../includes/header.php';
 include_once '../cruds/product/productCrud.php';
 $productCrud=new productCrud();
 $posts=$productCrud->readAllProducts();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: log-in.php");
+    exit();
+}
 ?>
 
 

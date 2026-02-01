@@ -17,6 +17,10 @@
 
 <?php
 include_once '../includes/header.php';
+if (!isset($_SESSION['user_id'])) {
+    header("Location: log-in.php");
+    exit();
+}
 ?>
 
 <main>
